@@ -1,7 +1,7 @@
 import requests
 Target = input("Target URL :")
 payload = "<script>alert('XXS');</script>"
-req = requests.get(target+payload,"html.parser").text
+req = requests.get(Target+payload,"html.parser").text
 if payload == req :
    print("Found vulnerability discovered")
 else :
